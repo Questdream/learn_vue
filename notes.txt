@@ -1,0 +1,11 @@
+1.使用vue的两种方式
+    直接引入vue.js文件
+        对于制作原型或学习，你可以这样使用最新版本：
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    基于Node环境创建Vue项目（使用vue/cli创建初始化一个vue项目
+
+2.元素和vue对象绑定
+    绑定文本： {{}}
+    绑定属性： v-bind(:)
+    绑定事件（事件修饰符）：v-on(@)
