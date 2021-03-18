@@ -8,7 +8,7 @@
 </template>
 
 <script>
-//  js代码 ,导出
+//  js代码 ,导出数据
 export default {
   data(){
     return{
