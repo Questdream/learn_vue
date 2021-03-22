@@ -3,7 +3,12 @@
         对于制作原型或学习，你可以这样使用最新版本：
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    基于Node环境创建Vue项目（使用vue/cli创建初始化一个vue项目
+    基于Node环境创建Vue项目（使用vue/cli创建初始化一个vue项目)
+        npm install -g @vue/cli
+        vue create 项目名称
+        npm run serve
+    
+    补充：先安装node，在安装node的时候，npm也同时安装
 
 2.元素和vue对象绑定
     绑定文本： {{}}
@@ -15,3 +20,14 @@
         链接：html的a标签
         登录：.vue组件，登录
         轮播图：.vue组件，轮播图
+
+
+三 模板语法
+    v-if
+    v-show
+    v-for
+
+    组件嵌套
+        组件命名：大写字母开头，驼峰命名
+        注册组件
+        组件传值
