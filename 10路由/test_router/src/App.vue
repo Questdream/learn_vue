@@ -1,12 +1,40 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- 类似于a标签 -->
+      <router-link to="/">首页</router-link> |
+      <router-link to="/blog">博客</router-link> |
+      <router-link to="/video">视频</router-link>   ||
+
+      <span v-if="showUser">欢迎：{{username}} <button @click="logout">注销</button></span>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+   data(){
+     return {
+       username:localStorage.getItem("usr"),
+       showUser:localStorage.getItem("usr")
+     }
+   },
+   // 侦听路径来设置网页某个值达到立刻就能变化的目的
+   watch:{
+     "$route.path": function(){
+       this.username = localStorage.getItem("usr");
+       this.showUser = localStorage.getItem("usr")
+     }
+   },
+   methods:{
+     logout(){
+       localStorage.clear();
+       this.$router.push("/login")
+     }
+   }
+}
+</script>
 
 <style>
 #app {
