@@ -5,11 +5,11 @@
     <!-- v-if:是不渲染dom -->
     <!-- <h1 v-if="true">hello world</h1> -->
     <!-- v-show: 渲染dom，然后将元素设置为display为none -->
-    <!-- <h2 v-show="false">hello vue</h2> -->
-    <!-- <p v-if="isLogin">欢迎：小明</p>
+    <h2 v-show="false">hello vue</h2> -->
+    <!-- <p v-if="isLogin">欢迎：小明</p> -->
     <p v-if="!isLogin"><a href="">请登录</a></p>
     <ul>
-      <li v-for="(fruit, index) of fruits" :key="index">
+      <li v-for="(fruit, index) in fruits" :key="index">
         <p>水果名称：{{fruit}}</p>
         <p>水果序号：{{index}}</p>
       </li>
@@ -27,7 +27,7 @@
             <td>{{v.age}}</td>
           </tr>
         </tbody>
-    </table> -->
+    </table>
   </div>
 </template>
 
